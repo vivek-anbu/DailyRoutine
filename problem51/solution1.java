@@ -1,32 +1,40 @@
-int tendollar=0;
-        int twentydollar=0;
-        int fivedollar=0;
-        int amount=bills-5;
-        int twentydollarneeded=Math.min(amount/20,twentydollar);
-        amount=amount-twentydollarneed*20;
-        twentydollar=twentydollar-twentydollarneeded;
+class Solution {
+    public boolean lemonadeChange(int[] bills) {
 
-        int tendollarneeded=Math.min(amount/10,tendollar);
-        amount=amount-tendollarneeded*10;
-        tendollar=tendollar-tendollarneeded;
+       int fivedollar=0;
+       int tendollar=0;
+       int twentydollar=0;
+       for(int bill:bills)
+       {
+            int amount=bill-5;
+            int twentyneeded=Math.min(amount/20,twentydollar);
+            amount=amount-twentyneeded*20;
+            twentydollar=twentydollar-twentyneeded;
+            
+            int tenneeded=Math.min(amount/10,tendollar);
+            amount=amount-tenneeded*10;
+            tendollar=tendollar-tenneeded;
 
-        int fivedollarneed=Math.min(amount/5,fivedollar);
-        amount=amount-fivedollarneed*5;
-        fivedollar=fivedollar-fivedollarneeded;
-        if(amount>0)
-        {
-            return false;
-        }
-        if(bill==20)
-        {
-            tentydollar++;
-        }
-        else if(bills==10)
-        {
-            tendollar++;
-        }
-        else if(bills==5)
-        {
-            fivedollar++;
-        }
-        return true;
+            int fiveneeded=Math.min(amount/5,fivedollar);
+            amount=amount-fiveneeded*5;
+            fivedollar=fivedollar-fiveneeded;
+            if(amount>0)
+            {
+                return false;
+            }
+            if(bill==20)
+            {
+                twentydollar++;
+            }
+            else if(bill==10)
+            {
+                tendollar++;
+            }
+            else if(bill==5) 
+            {   
+                fivedollar++;
+            }
+       }
+       return true; 
+    }
+}
