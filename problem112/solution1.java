@@ -1,6 +1,7 @@
 class Solution {
     public int maxFrequency(int[] nums, int k) {
-       int left=0;
+       Arrays.sort(nums);
+        int left=0;
        int right=0;
        long sum=0,maxFreq=0;
        while(right<nums.length)
