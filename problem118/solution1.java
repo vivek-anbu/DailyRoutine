@@ -1,4 +1,5 @@
 
+
 class Solution {
 
     void mergeSort(int arr[], int l, int r) {
@@ -15,12 +16,12 @@ class Solution {
     public void merge(int arr[],int l,int mid,int r)
     {
         int i=l;
-        int j=mid+l;
+        int j=mid+1;
         int k=0;
         int temp[]=new int[r-l+1];
         while(i<=mid&&j<=r)
         {
-            if(arr[i]>arr[j])
+            if(arr[i]<arr[j])
             {
                 temp[k++]=arr[i++];
             }
@@ -42,5 +43,6 @@ class Solution {
         {
             arr[startIndex++]=temp[k];
         }
+        
     }
 }
