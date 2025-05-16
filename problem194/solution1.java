@@ -6,11 +6,13 @@ class Solution {
 
         if(str1.length()>str2.length())
         {
-            str2="0"+str2;
+            while(str1.length()>str2.length()){
+            str2="0"+str2;}
         }
         else if(str2.length()>str1.length())
         {
-            str1="0"+str1;
+            while(str2.length()>str1.length()){
+            str1="0"+str1;}
         }
         int count=0;
         for(int i=0;i<str1.length();i++)
