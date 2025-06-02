@@ -2,13 +2,13 @@ class Solution {
     public int leastInterval(char[] tasks, int n) {
         
         int cnt[]=new int[26];
-        for(int i=0;i<taks.length;i++)
+        for(int i=0;i<tasks.length;i++)
         {
-            cnt[taks[i]-'A'];
+            cnt[tasks[i]-'A']++;
         }
         Arrays.sort(cnt);
         int max=cnt[25]-1;
-        idle=max*n;
+        int idle=max*n;
         for(int i=cnt.length-2;i>=0&&cnt[i]!=0;i--)
         {
             idle=idle-Math.min(cnt[i],max);
