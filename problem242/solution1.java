@@ -13,6 +13,7 @@ class Solution {
                 curEnd=Math.max(curEnd,intervals[i+1][1]);
                 i++;
             }
+            i++;
         }
         return count;
     }
