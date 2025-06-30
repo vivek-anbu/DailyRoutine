@@ -1,0 +1,2 @@
+A man his driving car from home to office with X petrol. There are N number of petrol bunks in the city with only few capacities and each petrol is located in different places For one km one liter will consume. So he fill up petrol in his petrol tank in each petrol bunks. Output the remaining petrol if he has or tell him that he cannot travel if he is out of petrol.
+:Ip: n=5 Op: 1 1 1 2 1 1 2 1 1 1 1 1 2 2 1
