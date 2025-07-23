@@ -74,9 +74,10 @@ class Solution {
     }
     public boolean validSub(char board[][],int startRow,int startCol)
     {
+         boolean seen[]=new boolean[10];
         for(int i=startRow;i<startRow+3;i++)
         {
-            boolean seen[]=new boolean[10];
+           
             for(int j=startCol;j<startCol+3;j++)
             {
                 char ch=board[i][j];
